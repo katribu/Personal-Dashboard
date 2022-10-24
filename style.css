@@ -1,0 +1,79 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-shadow: 0px 0px 20px #242424;
+    color: white;
+}
+
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* border: blue 2px solid; */
+    height: 90vh;
+}
+
+#author{
+    font-size: 20px;
+}
+
+span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+#weather {
+    display: flex;
+    flex-direction: column;
+    /* border: 2px orange solid; */
+}
+
+.weatherIcon {
+    width: 100px;
+    align-self: flex-end;
+    margin: 0;
+}
+
+.weatherInfo {
+    /* border: red 2px solid; */
+    align-self: flex-end;
+    margin-right: 5px;
+}
+
+#time {
+    /* border: blue 2px solid; */
+    text-align: center;
+}
+
+.time {
+    font-size: 3rem;
+    align-self: center;
+    width: 600px;
+}
+
+#quote {
+    margin-bottom: 0;
+    align-items: center;
+    /* border: pink 2px solid; */
+}
+
+.quote{
+    font-size: 18px;
+    margin: 0;
+
+}
+
+.quoteAuthor{
+    font-size: 14px;
+    margin-top: 3px;
+    font-weight: bolder;
+}
