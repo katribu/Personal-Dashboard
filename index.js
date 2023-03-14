@@ -8,7 +8,7 @@ fetch("https://api.unsplash.com/photos/random?client_id=FYb4c3CLs5fUqJ7lsLfofV9-
         return res.json()
         })
     .then(data => {
-        console.log(data)
+//         console.log(data)
         document.body.style.backgroundImage = `url(${data[0].urls.full})`
         document.getElementById("author").textContent = `By: ${data[0].user.name}`
     })
@@ -28,7 +28,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?q=oslo&appid=${apiKey}&un
             return res.json()
         })
         .then(data => {
-            console.log(data)
+//             console.log(data)
             const iconUrl = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
             document.getElementById("weather").innerHTML = `
                 <img class = "weatherIcon" src=${iconUrl} />
@@ -56,7 +56,7 @@ fetch("https://type.fit/api/quotes")
     .then(data => {
         let quotesArr = data[Math.floor(Math.random()*data.length)]
         for (let i = 0; i < data.length; i++){
-            console.log(data.length)
+       
             document.getElementById("quote").innerHTML = `
             <p class = "quote">${quotesArr.text}</p>
             <p class = "quoteAuthor">- ${quotesArr.author}</p>
