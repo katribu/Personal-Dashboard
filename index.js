@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 
 // Fetching Background Image - works fine!//
 
@@ -20,7 +18,7 @@ fetch("https://api.unsplash.com/photos/random?client_id=FYb4c3CLs5fUqJ7lsLfofV9-
 
 //Weather API Corner --> works!!//
 
-let apiKey = process.env.WEATCHER_API_KEY
+const apiKey = "bc5fa77fb33de57011c6be445beb3f4c"
 
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=oslo&appid=${apiKey}&units=metric`)
         .then(res => {
