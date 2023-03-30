@@ -1,0 +1,14 @@
+{
+  "name": "personal-dashboard",
+  "version": "1.0.0",
+  "description": "<p>Gives you the current time, weather, nice background image and a random quote. </p>\r <p>Used a weather API, UnSplash API and random quote API.</p>\r <p> Additionally I've made it into a Chrome Extension, such that every time a new tab is opened on the browser, I get a new instance of the dashboard.</p>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.3"
+  }
+}

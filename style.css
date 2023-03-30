@@ -18,8 +18,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* border: blue 2px solid; */
     height: 90vh;
+    padding: 30px;
 }
 
 #author{

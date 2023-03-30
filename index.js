@@ -1,3 +1,6 @@
+require('dotenv').config()
+
+
 // Fetching Background Image - works fine!//
 
 fetch("https://api.unsplash.com/photos/random?client_id=FYb4c3CLs5fUqJ7lsLfofV9-G-B1SNtrJuPIkPvBsy8&count=5&query=landscape")
@@ -8,9 +11,8 @@ fetch("https://api.unsplash.com/photos/random?client_id=FYb4c3CLs5fUqJ7lsLfofV9-
         return res.json()
         })
     .then(data => {
-//         console.log(data)
         document.body.style.backgroundImage = `url(${data[0].urls.full})`
-        document.getElementById("author").textContent = `By: ${data[0].user.name}`
+        document.getElementById("author").textContent = `Background by: ${data[0].user.name}`
     })
     .catch(err => console.error(err))
 
@@ -18,7 +20,7 @@ fetch("https://api.unsplash.com/photos/random?client_id=FYb4c3CLs5fUqJ7lsLfofV9-
 
 //Weather API Corner --> works!!//
 
-let apiKey = "bc5fa77fb33de57011c6be445beb3f4c"
+let apiKey = process.env.WEATCHERA_API_KEY
 
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=oslo&appid=${apiKey}&units=metric`)
         .then(res => {
