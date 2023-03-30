@@ -20,7 +20,7 @@ fetch("https://api.unsplash.com/photos/random?client_id=FYb4c3CLs5fUqJ7lsLfofV9-
 
 //Weather API Corner --> works!!//
 
-let apiKey = process.env.WEATCHERA_API_KEY
+let apiKey = process.env.WEATCHER_API_KEY
 
 fetch(`https://api.openweathermap.org/data/2.5/weather?q=oslo&appid=${apiKey}&units=metric`)
         .then(res => {
