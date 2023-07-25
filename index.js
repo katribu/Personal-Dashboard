@@ -51,25 +51,20 @@ function getTime(){
 
 setInterval(getTime, 1000)
 
-fetch("https://type.fit/api/quotes")
+
+
+fetch("https://api.api-ninjas.com/v1/quotes", {
+    method:'GET',
+    headers: {'X-Api-Key': 'EYeusuV7KAshEMZrUzhDcg==rIijamsp5zUZTC4i'}
+})
     .then(res => res.json())
     .then(data => {
-        let quotesArr = data[Math.floor(Math.random()*data.length)]
-        for (let i = 0; i < data.length; i++){
-       
-            document.getElementById("quote").innerHTML = `
-            <p class = "quote">${quotesArr.text}</p>
-            <p class = "quoteAuthor">- ${quotesArr.author}</p>
-           `
-           if (quotesArr.author === null){
-            document.getElementById("quote").innerHTML = `
-            <p class = "quote">${quotesArr.text}</p>
-            <p class = "quoteAuthor">- Author Unknown</p>
-           `
-           }
-        }
-        
+        let quotesArr = data[0]
+        document.getElementById("quote").innerHTML = `
+        <p class = "quote">${quotesArr.quote}</p>
+        <p class = "quoteAuthor">- ${quotesArr.author}</p>`
     })
+
 
 
     
