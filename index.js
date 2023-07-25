@@ -51,7 +51,7 @@ function getTime(){
 setInterval(getTime, 1000)
 
 
-
+// Quote API
 fetch("https://api.api-ninjas.com/v1/quotes", {
     method:'GET',
     headers: {'X-Api-Key': 'EYeusuV7KAshEMZrUzhDcg==rIijamsp5zUZTC4i'}
